@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.logo-text {
+  color: #009EFF;
+  text-align: center;
+  font-family: "Product Sans";
+  font-size: 26.554px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32.424px;
+  letter-spacing: -1.062px;
+}
+
+.videos-summarized {
+  color: #000;
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.13px;
+}
+
+.refresh-text {
+  color: #000;
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: -0.3px;
+}
+
+.upgrade-text {
+  color: #009EFF;
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.12px;
+}
+
+.profile-name {
+  color: #000;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.06px;
+}
+
+#upgrade-title {
+  color: #000;
+  font-family: "Plus Jakarta Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.48px;  
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 2s linear infinite;
+}
+
+.animate-progress {
+  animation: progress 2s ease-in-out infinite;
+}

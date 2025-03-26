@@ -1,0 +1,39 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid",
+        ".validate": "newData.hasChildren(['uid', 'displayName', 'email', 'createdAt', 'lastLoginAt', 'summaryCount', 'plan', 'dailySummaryCount', 'dailySummaryResetTime'])",
+        "uid": { ".validate": "newData.val() === $uid" },
+        "displayName": { ".validate": "newData.isString()" },
+        "email": { ".validate": "newData.isString()" },
+        "createdAt": { ".validate": "newData.isNumber()" },
+        "lastLoginAt": { ".validate": "newData.isNumber()" },
+        "summaryCount": { ".validate": "newData.isNumber()" },
+        "plan": { ".validate": "newData.val() === 'free' || newData.val() === 'pro'" },
+        "dailySummaryCount": { ".validate": "newData.isNumber()" },
+        "dailySummaryResetTime": { ".validate": "newData.isNumber()" }
+      }
+    },
+    "summaries": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid",
+        ".indexOn": ["createdAt"],
+        "$summaryId": {
+          ".validate": "newData.hasChildren(['id', 'videoId', 'title', 'thumbnail', 'duration', 'summary', 'createdAt', 'userId'])",
+          "id": { ".validate": "newData.isString()" },
+          "videoId": { ".validate": "newData.isString()" },
+          "title": { ".validate": "newData.isString()" },
+          "thumbnail": { ".validate": "newData.isString()" },
+          "duration": { ".validate": "newData.isString()" },
+          "summary": { ".validate": "newData.exists()" },
+          "mindMap": { ".validate": "newData.exists() || !newData.exists()" },
+          "createdAt": { ".validate": "newData.isNumber() && newData.val() <= now" },
+          "userId": { ".validate": "newData.isString() && newData.val() === $uid" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "faqs": [
+    {
+      "id": "accuracy",
+      "question": "How accurate are the summaries?",
+      "answer": "Our AI-powered summaries maintain 95%+ accuracy by using advanced natural language processing. Each summary captures key points, insights, and context while filtering out redundant information. We continuously improve our algorithms based on user feedback to ensure the highest quality summaries."
+    },
+    {
+      "id": "trial",
+      "question": "What happens after my 7-day free trial?",
+      "answer": "After your trial ends, you'll automatically transition to our Free plan unless you choose to upgrade to Pro. The Free plan includes 2 summaries per day, while Pro unlocks unlimited summaries and advanced features. You can upgrade or downgrade your plan at any time from your account settings."
+    },
+    {
+      "id": "mindmap",
+      "question": "How does the mindmap visualization help?",
+      "answer": "Our AI-generated mindmaps visually connect key concepts from the video, helping you understand relationships between ideas. This visual learning tool makes it easier to retain information, review complex topics, and identify the most important takeaways from any video content."
+    },
+    {
+      "id": "video-length",
+      "question": "What's the maximum video length supported?",
+      "answer": "Free users can summarize videos up to 30 minutes long. Pro users can summarize videos up to 4 hours in length, perfect for lengthy lectures, podcasts, and educational content. All summaries maintain the same high quality regardless of video length."
+    },
+    {
+      "id": "supported-platforms",
+      "question": "Which video platforms are supported?",
+      "answer": "We currently support YouTube videos. Simply copy and paste the video URL from your browser. We're actively working on adding support for other platforms like Vimeo, Coursera, and educational websites based on user demand."
+    }
+  ]
+}
